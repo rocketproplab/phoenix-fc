@@ -44,4 +44,4 @@ Third two digits represent the fuel valve 2
 * Launch (button): open two fuel valves
 
 
-![My Image](.\lib\diagrams\pheonix-fc-launch-control-auto.svg)
+![My Image](.\lib\diagrams\pheonix-fc-launch-control-auto.png)
