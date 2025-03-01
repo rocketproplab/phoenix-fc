@@ -3,45 +3,39 @@ Phoenix Flight Computer/Controller
 
 # Main functions
 
-## Launch Sequence
+## Launch Sequence (Auto Mode)
 Launch sequence has four stages \
-Each stage is coded by a six digit binary representation: from left to right: \
-First two digits represent the release valve
-* 00: default state, valve close
-* 01: release valve open, venting pressure
-* 10: arm valve open
+Each stage is coded by a six digit binary representation \
+Each two digits representation:
+* 00: flow valve close, vent valve close
+* 10: flow valve open, vent valve close
+* 10: flow valve close, vent valve open
+* 11: forbiden state, cannot open flow and vent at the same time
 
-Second two digits represent the fuel valve 1
-* 00: default state, valve close
-* 01: release valve open, venting pressure
-* 10: fuel valve 1 valve open
+From left to right, each two digits represents the state for: \
+(arm | fuel valve 1 | fuel valve2 ) \
+Each state has two valves: flow valve and vent valve
 
-Third two digits represent the fuel valve 2
-* 00: default state, valve close
-* 01: release valve open, venting pressure
-* 10: fuel valve 2 valve open
-
-### PRE-ARM
+### PRE-ARM (00|00|00)
 * default state, nothing happens
 * all valves closed
 
-### ARMED: system prepared, waiting to open fuel valves
-* arm valve open
+### ARMED (10|00|00)
+* arm flow valve open
 
-### ABORT: emergency break, close all fuel valves
-* release valves for arm, fuel valve 1, fule valve 2 open
-* emergency break
+### ABORT (01|01|01)
+* open vent valves for all 
+* emergency break, abort the mission
 
-### LAUNCH: two main fuel values are opened, rocket 
-* after arm valve is opend
-* two fuel valves open for mixing
+### LAUNCH:(10|10|10)
+* after arm flow valve is opend
+* open the flow valevs for both fuels
 * rocket launching, no way back
 
 
 ### Buttons/Swithces
-* Abort (button): has highest priority, open release valve for all
-* Arm (switch): open/close arm valves
-* Launch (button): open two fuel valves
-
+* Abort (button): has highest priority, open vent valves for all
+* Arm (switch): open/close arm flow valve
+* Launch (button): open fuel 1&2 flow valves
 
 ![My Image](./lib/diagrams/pheonix-fc-launch-control-auto.svg)
