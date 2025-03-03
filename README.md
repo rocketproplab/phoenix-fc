@@ -3,7 +3,7 @@ Phoenix Flight Computer/Controller
 
 # Main functions
 
-## Launch Sequence (Auto Mode)
+## Launch Control  - Launch Mode (Risk: Low)
 Launch sequence has four stages \
 Each stage is coded by a six digit binary representation \
 Each two digits representation:
@@ -38,4 +38,19 @@ Each state has two valves: flow valve and vent valve
 * Arm (switch): open/close arm flow valve
 * Launch (button): open fuel 1&2 flow valves
 
-![My Image](./lib/diagrams/pheonix-fc-launch-control-auto.svg)
+![My Image](./lib/diagrams/pheonix-fc-launch-control-launch.svg)
+
+
+## Launch Control - Fueling Mode (Risk: Medium)
+* In fueling mode, all flow valves are locked in OFF mode
+* all vent valves can be controlled by individual switch
+
+![My Image](./lib/diagrams/pheonix-fc-launch-control-fueling.svg)
+
+
+## Launch Control - Dev Mode (Risk: High)
+* This mode is intended for testing valve openings before fueling
+* All valves are free to be switched on and off
+* Be very sure of what you are doing when using this mode
+
+![My Image](./lib/diagrams/pheonix-fc-launch-control-dev.svg)
