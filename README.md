@@ -54,3 +54,10 @@ Each state has two valves: flow valve and vent valve
 * Be very sure of what you are doing when using this mode
 
 ![My Image](./lib/diagrams/pheonix-fc-launch-control-dev.svg)
+
+
+## Fuel and valve diagram
+<img src="./lib/diagrams/fuel-diagram.jpg" alt="drawing" width="400"/>
+
+## Draw.io Link
+* https://drive.google.com/file/d/1tbEu6RL3mTaqcmE_wz8DDxYVTB-fJ5dZ/view?usp=sharing
