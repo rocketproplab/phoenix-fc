@@ -61,3 +61,7 @@ Each state has two valves: flow valve and vent valve
 
 ## Draw.io Link
 * https://drive.google.com/file/d/1tbEu6RL3mTaqcmE_wz8DDxYVTB-fJ5dZ/view?usp=sharing
+
+# Launch Terminal Physical Specifications
+## Ethernet
+[W5500 Ethernet LAN Network Module](https://www.amazon.com/HiLetgo-Ethernet-Network-Support-Microcontroller/dp/B0CDWX9VQ5)
